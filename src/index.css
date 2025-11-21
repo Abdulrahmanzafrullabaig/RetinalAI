@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Custom CSS Variables for the new color palette */
+:root {
+  /* Primary Color: Charcoal (#334155) */
+  --color-primary: #334155;
+  --color-primary-light: #E8EBED;
+  --color-primary-dark: #1F2D3D;
+  
+  /* Background Color: Light Cool Gray (#F1F5F9) */
+  --color-background: #F1F5F9;
+  --color-background-dark: #E2E8F0;
+  
+  /* Highlight/CTA Color: Warm Gold (#F59E0B) */
+  --color-gold: #F59E0B;
+  --color-gold-light: #FFFBEB;
+  --color-gold-dark: #D97706;
+}
+
+/* Base typography styles */
+@layer base {
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #475569; /* Body text color */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #334155; /* Charcoal for headings */
+  }
+  
+  a {
+    color: #334155; /* Charcoal for links */
+    transition: all 0.2s ease;
+  }
+  
+  a:hover {
+    color: #F59E0B; /* Warm Gold on hover */
+    text-decoration: underline;
+    text-decoration-color: #F59E0B;
+  }
+}
+
+/* Custom animations for chatbot */
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chatbotPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.message-slide-in {
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+.chatbot-pulse {
+  animation: chatbotPulse 2s infinite;
+}
+
+/* Smooth scrollbar for chat messages */
+.chat-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-background-dark);
+  border-radius: 2px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
