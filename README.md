@@ -60,7 +60,7 @@ RetinalAI is an advanced AI-powered diagnostic system that uses deep learning to
 - **Frontend**: React 18 with TypeScript, Vite, Tailwind CSS
 - **Backend**: Python Flask
 - **AI Models**: ResNet50, EfficientNet, VGG16, DenseNet121
-- **Database**: SQLite
+- **Database**: SQLite.
 
 ## Usage
 
