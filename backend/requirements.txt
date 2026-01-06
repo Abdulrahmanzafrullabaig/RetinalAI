@@ -1,0 +1,17 @@
+Flask
+Flask-CORS
+Werkzeug
+torch
+torchvision
+Pillow
+numpy
+opencv-python
+matplotlib
+reportlab
+shap
+pytorch-grad-cam
+timm
+typing-extensions
+scikit-image
+google-generativeai
+gdown
